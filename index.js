@@ -26,11 +26,11 @@ app.get('/hello2',(req,res)=>{
     })
 })
 app.post('/article', async (req,res)=>{
-    let N = new Article(JSON.parse(req.body));
+    let N = new Article(req.body);
     await N.save()
     console.log("DONE!")
-    console.log(JSON.parse(req.body))
-    res.send(JSON.parse(req.body))
+    console.log(req.body)
+    res.send(req.body)
 })
 app.get('/article/:a',async(req,res)=>{
     console.log(req.params.a)
