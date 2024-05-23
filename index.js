@@ -14,6 +14,13 @@ mongoose.connect("mongodb+srv://hamooo32:hamooogaming32@my-express.55wvrwz.mongo
 })
 app.use(express.json())
 
+app.post("/user/:user/:pass",async(req,res)=>{
+    let newArticle = new Article()
+    newArticle.username = req.params.user
+    newArticle.password = req.params.pass
+    await newArticle.save()
+    res.send("Created")
+})
 
 app.listen(3001,()=>{
     console.log("Done");
