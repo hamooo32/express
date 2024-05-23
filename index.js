@@ -29,7 +29,7 @@ app.post('/article', async (req,res)=>{
     let N = new Article(req.body);
     await N.save()
     console.log("DONE!")
-    res.json(res.json)
+    res.json(req.body)
 })
 app.get('/article/:a',async(req,res)=>{
     console.log(req.params.a)
