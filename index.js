@@ -50,5 +50,5 @@ app.get('/articl/:a',async(req,res)=>{
 })
 
 app.listen(3000,()=>{
-    console.log("done");
+    console.log("Done");
 })
