@@ -26,11 +26,7 @@ app.get('/hello2',(req,res)=>{
     })
 })
 app.post('/article', async (req,res)=>{
-    let N = new Article();
-    let title =req.body.title
-    let body = req.body.body
-    N.title=title
-    N.body=body
+    let N = new Article(req.body);
     await N.save()
     console.log("DONE!")
     res.json(res.json)
