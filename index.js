@@ -29,7 +29,8 @@ app.post('/article', async (req,res)=>{
     let N = new Article(req.body);
     await N.save()
     console.log("DONE!")
-    res.json(req.body)
+    console.log(req.body)
+    res.send(req.body)
 })
 app.get('/article/:a',async(req,res)=>{
     console.log(req.params.a)
@@ -38,7 +39,7 @@ app.get('/article/:a',async(req,res)=>{
 })
 app.get('/article',async(req,res)=>{
     let x =await Article.find()
-    res.json(x[0])
+    res.json(x)
 })
 app.get('/articl/:a',async(req,res)=>{
     let x =await Article.find()
