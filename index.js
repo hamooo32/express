@@ -1,10 +1,10 @@
 const express = require("express")
 const mongoose = require("mongoose")
-//mongodb+srv://hamooo32:<password>@cluster0.r1ab8wr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+//mongodb+srv://hamooo32:hamooogaming32@my-express.55wvrwz.mongodb.net/?retryWrites=true&w=majority&appName=my-express
 const Article = require("./models/Article.js")
 
 const app = express()
-mongoose.connect("mongodb+srv://hamooo32:hamooogaming32@cluster0.jck4ttw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://hamooo32:hamooogaming32@my-express.55wvrwz.mongodb.net/?retryWrites=true&w=majority&appName=my-express")
 .then(()=>{
     console.log("Connected!")
 }).catch((err)=>{
