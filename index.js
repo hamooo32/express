@@ -14,9 +14,9 @@ app.use(express.json())
 app.get('/',(req,res)=>{
     res.send("welcome")
 })
-app.get('/hello',(req,res)=>{
-    let param =req.body
-    let x = Number(param.num1) + Number(param.num2)
+app.get('/hello/:num1/:num2',(req,res)=>{
+    let param =req.params
+    let x = Number(req.params.num1) + Number(req.params.num2)
     console.log(x)
     res.send(String(x))
 })
