@@ -6,7 +6,7 @@ const Article = require("./models/Article.js")
 const app = express()
 const cors = require('cors')
 app.use(cors());
-mongoose.connect("mongodb+srv://hamooo32:hamooogaming32@my-express.55wvrwz.mongodb.net/?retryWrites=true&w=majority&appName=my-express")
+mongoose.connect("mongodb+srv://hamooo32:hamooogaming32@my-express.nwajmpw.mongodb.net/?retryWrites=true&w=majority&appName=my-express")
 .then(()=>{
     console.log("Connected!")
 }).catch((err)=>{
